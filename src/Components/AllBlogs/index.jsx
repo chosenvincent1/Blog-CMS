@@ -1,3 +1,4 @@
+import { Pagination } from "../Pagination";
 
 export function AllBlogs(){
     const blogData = [
@@ -50,7 +51,7 @@ export function AllBlogs(){
                 <button className="bg-[#007CEF] rounded-[10px] py-[12px] px-[14px] md:py-[14px] md:px-[18px] text-[#fff]  ">Write Blog</button>
             </div>
 
-            <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] ">
+            <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] mb-[50px] ">
                 {blogData.map(blog=> {
                     return (
                         <div key={blog.id} className="w-[100%] md:w-[306px] shadow rounded-[10px] cursor-pointer ">
@@ -70,6 +71,8 @@ export function AllBlogs(){
                     )
                 })}
             </section>
+
+            <Pagination />
         </main>
     )
 }
